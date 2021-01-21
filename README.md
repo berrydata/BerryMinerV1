@@ -1,24 +1,12 @@
-
-<p align="center">
-  <a href='https://www.berrydata.co/'>
-    <img src= './public/Berry.png' width="250" height="200" alt='berrydata.co' />
-  </a>
-</p>
-
-<p align="center">
-  <a href='https://twitter.com/WeAreBerry'>
-    <img src= 'https://img.shields.io/twitter/url/http/shields.io.svg?style=social' alt='Twitter WeAreBerry' />
-  </a> 
-</p>
-
 # Berry Miner
+
+Fork from Tellor miner(telliot 3.0.3) for Berry oracle price feeding.
 
 This is the workhorse of the Miner system as it takes on solving the PoW challenge.  
 It's built on Go and utilizes a split structure.  The database piece is a LevelDB that keeps track of all variables (challenges, difficulty, values to submit, etc.) and the miner simply solves the PoW challenge.  This enables parties to split the pieces for optimization.
 
-**The Berry system is a way to push data on-chain.  What the pieces of data are are specificied in the psr.json file. Note that the data corresponds to a specific API.  The berry mining system is set up to pull api data to generate these values to submit on-chain once a correct nonce is mined. These specific apis are just suggestions.  The system is not guarunteed to work for everyone.  It is up to the consnesus of the Berry token holders to determine what a correct value is. As an example, request ID 4 is BTC/USD.  If the api's all go down, it is the responsibility of the miner to still submit a valid BTC/USD price.  If they do not, they risk being disputed and slashed.  For these reasons, please contribute openly to the official Berry miner (or an open source variant), as consensus here is key.  If you're miner gets a different value than the majority of the of the other miners, you risk being punished.**
+**The Berry system is a way to push data on-chain.  What the pieces of data are are specificied in the psr.json file. Note that the data corresponds to a specific API.  The berry mining system is set up to pull api data to generate these values to submit on-chain once a correct nonce is mined. These specific apis are just suggestions.  The system is not guarunteed to work for everyone.  It is up to the consnesus of the Berry token holders to determine what a correct value is. As an example, request ID 1 is BTC/USD.  If the api's all go down, it is the responsibility of the miner to still submit a valid BTC/USD price.  If they do not, they risk being disputed and slashed.  For these reasons, please contribute openly to the official Berry miner (or an open source variant), as consensus here is key.  If you're miner gets a different value than the majority of the of the other miners, you risk being punished.**
 
-A list of all PSR's and the data expected can be found here: [https://docs.google.com/spreadsheets/d/1rRRklc4_LvzJFCHqIgiiNEc7eo_MUw3NRvYmh1HyV14](https://docs.google.com/spreadsheets/d/1rRRklc4_LvzJFCHqIgiiNEc7eo_MUw3NRvYmh1HyV14)
 
 <p align="center">
     <img src= './public/minerspecs.png' width="450" alt='MinerSpecs' />
@@ -27,25 +15,15 @@ A list of all PSR's and the data expected can be found here: [https://docs.googl
 
 ### Berry Deployed Addresses
 
-Mainnet - [0x0ba45a8b5d5575935b8158a88c631e9f9c95a2e5](https://etherscan.io/address/0x0ba45a8b5d5575935b8158a88c631e9f9c95a2e5)
-
-Rinkeby - [0xFe41Cb708CD98C5B20423433309E55b53F79134a](https://rinkeby.etherscan.io/address/0xFe41Cb708CD98C5B20423433309E55b53F79134a)
-
-</br>
+BSC Mainnet - [](https://etherscan.io/address/)
 
 ### Instructions for deployment
 
+Now only support linux and MacOS system.
 
-[Berry Miner Instructions](https://berry.readthedocs.io/en/latest/MinerSetup/)
-
-
-[Berry Deployment Instructions -- From Source](https://berry.readthedocs.io/en/latest/MinerSetupFromSource/)
-
-
-#### How to Contribute<a name="how2contribute"> </a>  
-Join our Discord or Telegram:
-[<img src="./public/telegram.png" width="24" height="24">](https://t.me/berry)
-[<img src="./public/discord.png" width="24" height="24">](https://discord.gg/zFcM3G)
+```bash
+./relealse_build.sh
+```
 
 ### DISCLAIMER
 
@@ -68,8 +46,3 @@ Please join our Discord for more information and community updates.
 #### Contributors<a name="contributors"> </a>
 
 This repository is maintained by the Berry team - [www.berrydata.co](https://www.berrydata.co)
-
-
-#### Copyright
-
-Berry Data 2021
